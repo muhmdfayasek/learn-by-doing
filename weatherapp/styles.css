@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    margin: 30px;
+}
+
+.weatherForm {
+    margin: 30px 10px 100px 10px ;
+}
+
+.cityInput {
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid rgba(68, 49, 49, 0.841);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(60, 185, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(84, 247, 72);
+}
+
+
+/* Loader */
+.loader {
+    border-top: 20px solid #3498db;
+    border-bottom: 20px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: none;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    } 100%{
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    } 100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Card */
+.card {
+    background: linear-gradient(to left bottom, rgb(140, 134, 185), rgb(214, 214, 34), rgb(208, 228, 208));
+    padding: 50px;
+    box-shadow: 2px 2px 5px rgba(68, 49, 49, 0.841);
+    min-width: 300px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    animation: animatebottom 1s;
+    -webkit-animation: animatebottom 1s;
+}
+
+@keyframes animatebottom {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animatebottom {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Card contents */
+h1 {
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.cityDisplay, .tempDisplay {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.877);
+    margin-bottom: 25px;
+}
+
+.imgDisplay {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+
+}
+
+.descDisplay, .humidityDisplay {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.errorDisplay {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}

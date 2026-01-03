@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 254, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.main-section {
+    width: 665px;
+}
+
+.habit-form {
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-inline: 10px;
+    margin-right: 5px;
+}
+
+.add-btn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(69, 69, 248);
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: rgb(108, 108, 248);
+    box-shadow: 2px 2px 5px black;
+}
+
+.add-btn:active {
+    background-color: rgb(29, 29, 255);
+}
+
+.tasks,
+.completed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-head,
+.completed-head {
+    position: relative;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.section-head {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.habit-count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 170, 255);
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 2px;
+}
+
+li {
+    list-style-type: none;
+    background-color: rgb(146, 197, 221);
+    min-height: 50px;
+    width: 100%;
+    margin-block: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.habit-date {
+    margin: 10px 10px;
+}
+
+.habit-display {
+    margin: 10px;
+    width: 480px;
+    font-size: 20px;
+}
+
+.section-btn {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 120px;
+}
+
+.list-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+}
