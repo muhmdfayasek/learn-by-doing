@@ -8,15 +8,17 @@ body {
     background-color: #F5F5F5;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
-.container {
+.container { 
     width: calc(100% - 30px);
-    height: calc(1fr - 30px);
+    height: calc(100% - 30px);
     background-color: white; 
     margin: 15px;
     border-radius: 20px;
     box-shadow: 1px 1px 10px rgb(203, 201, 201), -1px -1px 10px rgb(203, 201, 201);
+    display: block;
 }
 
 .head {
@@ -93,16 +95,6 @@ h2 {
     margin: 20px;
 }
 
-select {
-    height: 50px;
-    width: 250px;
-    border: 2px solid black;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 20px;
-}
-
 input[type="date"] {
     text-align: center;
     font-size: 20px;
@@ -117,6 +109,8 @@ input[type="date"] {
     height: 535px;
 }
 
+
+/* Info table section */
 .info-table {
     width: calc(100% - 750px);
     border: 2px solid rgba(247, 245, 245, 0.647);
@@ -133,13 +127,13 @@ table {
 
 .tr-income {
     background-color: rgb(92, 227, 105);
-    border-radius: 10px;
+    height: 52px;
 }
 
 .tr-expense {
     background-color: rgb(227, 92, 92);
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    height: 52px;
 }
 
 td {
@@ -147,6 +141,7 @@ td {
     font-size: 20px;
     font-weight: 500;
     padding: 10px;
+    text-align: center;
 }
 
 .manipulation {
@@ -158,10 +153,15 @@ td {
 table button {
     width: 40px;
     height: 30px;
-    font-size: 15px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: rgb(21, 18, 18);
 }
 
 
+/* Total display section */
 .total {
     width: 700px;
     display: flex;
@@ -179,4 +179,101 @@ table button {
     border-radius: 10px;
     font-size: 35px;
     font-weight: bold;
+    position: relative;
+}
+
+.money-count {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+
+.income-total span, .balance span {
+    color: green;
+}
+
+.expense-total span {
+    color: red;
+}
+
+
+/* Editing form */
+.editing-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 900;
+}
+
+.editing-form {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgba(247, 245, 245, 0.647);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(203, 201, 201), -1px -1px 10px rgb(203, 201, 201);
+    animation: popup 0.2s ease-in;
+    -webkit-animation: popup 0.2s ease-in;
+}
+
+@keyframes popup {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes popup {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+
+.editing-form input {
+    height: 60px;
+    width: 350px;
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.editing-form button[type="submit"] {
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.editing-form button[type="button"] {
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 20px;
 }

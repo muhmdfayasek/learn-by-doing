@@ -14,6 +14,7 @@
             </div>
 
             <div class="second-container">
+                <!-- Income form section -->
                 <div class="income-container">
                     <h2>Income:</h2>
                     <form action="" class="income-form">
@@ -23,19 +24,12 @@
                     </form>
                 </div>
 
+                <!-- Expense form section -->
                 <div class="expense-container">
                     <h2>Expense:</h2>
                     <form action="" class="expense-form">
                         <input type="text" name="" id="expense-name" placeholder="Expense name" />
                         <input type="number" name="" id="expense-amount" placeholder="Amount" />
-                        <select name="" id="expense-category">
-                            <option value="">Select Category</option>
-                            <option value="Home">Home</option>
-                            <option value="Food">Food</option>
-                            <option value="Transport">Transport</option>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Other">Other</option>
-                        </select>
                         <input type="date" name="" id="expense-date" />
                         <button type="submit">Add Expense</button>
                     </form>
@@ -43,13 +37,13 @@
             </div>
 
             <div class="third-container">
-                <div class="info-table">
+                <!-- Table that show info of income & expense -->
+                <div class="info-table"> 
                     <table>
                         <!-- <thead>
                         <tr>
                             <th>Name</th>
                             <th>Amount</th>
-                            <th>Category</th>
                             <th>Date</th>
                             <th></th>
                         </tr>
@@ -58,33 +52,56 @@
                             <tr class="tr-expense">
                                 <td>Travel</td>
                                 <td>500</td>
-                                <td>Transport</td>
                                 <td>04/01/2026</td>
                                 <td class="manipulation">
-                                    <button class="edit-btn"><i class="bi bi-pencil-fill"></i></button>
-                                    <button class="dlt-btn"><i class="bi bi-trash-fill"></i></button>
+                                    <button class="edit-btn bi bi-pencil-fill"></button>
+                                    <button class="dlt-btn bi bi-trash-fill"></button>
                                 </td>
                             </tr>
                             <tr class="tr-income">
                                 <td>Stock</td>
                                 <td>1000</td>
-                                <td>Income</td>
                                 <td>06/01/2026</td>
                                 <td class="manipulation">
-                                    <button class="edit-btn"><i class="bi bi-pencil-fill"></i></button>
-                                    <button class="dlt-btn"><i class="bi bi-trash-fill"></i></button>
+                                    <button class="edit-btn bi bi-pencil-fill"></button>
+                                    <button class="dlt-btn bi bi-trash-fill"></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
+                <!-- List of total income , expense & balance -->
                 <div class="total">
-                    <div class="income-total">Total Income</div>
-                    <div class="expense-total">Total Expense</div>
-                    <div class="balance">Balance</div>
+                    <div class="income-total">
+                        <p>Total Income</p>
+                        <span class="money-count">1000</span>
+                    </div>
+                    <div class="expense-total">
+                        <p>Total Expense</p>
+                        <span class="money-count">1000</span>
+                    </div>
+                    <div class="balance">
+                        <p>Balance</p>
+                        <span class="money-count">1000</span>
+                    </div>
                 </div>
             </div>
+        </div>
+
+
+        <!-- Section Pop-up if user click on edit button -->
+        <div class="editing-box" style="display: none;">
+            <form action="" class="editing-form">
+                <h1 class="edit-head">Edit content</h1>
+                <input type="text" id="edited-name" placeholder="Edit name" />
+                <input type="number" id="edited-amount" placeholder="Amount" />
+                <input type="date" id="edited-date" />
+                <div class="button-section">
+                    <button type="button">Cancel</button>
+                    <button type="submit">Add Expense</button>
+                </div>
+            </form>
         </div>
 
         <script src="script.js"></script>
