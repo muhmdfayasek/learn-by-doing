@@ -1,3 +1,0 @@
-const API_CONFIG = {
-    WEATHER_KEY: "e0b4d711ad146c12ce6e14659df37190"
-};
