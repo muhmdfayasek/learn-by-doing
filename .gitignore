@@ -1,1 +1,2 @@
-config.js  #This files is used to store the API key of openweathermap.org
+#This files is used to store the API key of openweathermap.org
+config.js 
