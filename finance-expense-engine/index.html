@@ -19,7 +19,7 @@
                     <h2>Income:</h2>
                     <form action="" class="income-form">
                         <input type="text" id="income-name" placeholder="Income name" />
-                        <input type="number" id="income-input" placeholder="Your Income" />
+                        <input type="number" id="income-amount" placeholder="Your Income" />
                         <button type="submit">Add Income</button>
                     </form>
                 </div>
@@ -28,9 +28,9 @@
                 <div class="expense-container">
                     <h2>Expense:</h2>
                     <form action="" class="expense-form">
-                        <input type="text" name="" id="expense-name" placeholder="Expense name" />
-                        <input type="number" name="" id="expense-amount" placeholder="Amount" />
-                        <input type="date" name="" id="expense-date" />
+                        <input type="text" id="expense-name" placeholder="Expense name" />
+                        <input type="number" id="expense-amount" placeholder="Amount" />
+                        <input type="date" id="expense-date" />
                         <button type="submit">Add Expense</button>
                     </form>
                 </div>
@@ -48,7 +48,7 @@
                             <th></th>
                         </tr>
                     </thead> -->
-                        <tbody>
+                        <tbody id="table-tbody">
                             <tr class="tr-expense">
                                 <td>Travel</td>
                                 <td>500</td>
@@ -75,15 +75,15 @@
                 <div class="total">
                     <div class="income-total">
                         <p>Total Income</p>
-                        <span class="money-count">1000</span>
+                        <span class="money-count" id="income-total-count">1000</span>
                     </div>
                     <div class="expense-total">
                         <p>Total Expense</p>
-                        <span class="money-count">1000</span>
+                        <span class="money-count" id="expense-total-count">1000</span>
                     </div>
                     <div class="balance">
                         <p>Balance</p>
-                        <span class="money-count">1000</span>
+                        <span class="money-count" id="balance-total-count">1000</span>
                     </div>
                 </div>
             </div>
