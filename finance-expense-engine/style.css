@@ -127,6 +127,7 @@ table {
 
 .tr-income {
     background-color: rgb(92, 227, 105);
+    border: 1px solid rgb(255, 255, 255);
     height: 52px;
 }
 
@@ -168,7 +169,7 @@ table button {
     flex-direction: column;
     border-radius: 10px;
     border: 2px solid rgba(247, 245, 245, 0.647);
-    margin: 70px 15px;
+    margin: 15px 15px;
 }
 
 .income-total, .expense-total, .balance {
@@ -194,6 +195,18 @@ table button {
 
 .expense-total span {
     color: red;
+}
+
+.reset-btn {
+    width: 300px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: #dc3545;
+    color: white;
+    margin: 15px 200px;
 }
 
 

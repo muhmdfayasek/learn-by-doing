@@ -18,8 +18,8 @@
                 <div class="income-container">
                     <h2>Income:</h2>
                     <form action="" class="income-form">
-                        <input type="text" id="income-name" placeholder="Income name" />
-                        <input type="number" id="income-amount" placeholder="Your Income" />
+                        <input type="text" id="income-name" placeholder="Income name" required/>
+                        <input type="number" id="income-amount" placeholder="Your Income" min="1" required/>
                         <button type="submit">Add Income</button>
                     </form>
                 </div>
@@ -28,9 +28,9 @@
                 <div class="expense-container">
                     <h2>Expense:</h2>
                     <form action="" class="expense-form">
-                        <input type="text" id="expense-name" placeholder="Expense name" />
-                        <input type="number" id="expense-amount" placeholder="Amount" />
-                        <input type="date" id="expense-date" />
+                        <input type="text" id="expense-name" placeholder="Expense name" required/>
+                        <input type="number" id="expense-amount" placeholder="Amount" min="1" required/>
+                        <input type="date" id="expense-date" required/>
                         <button type="submit">Add Expense</button>
                     </form>
                 </div>
@@ -49,7 +49,7 @@
                         </tr>
                     </thead> -->
                         <tbody id="table-tbody">
-                            <tr class="tr-expense">
+                            <!-- <tr class="tr-expense">
                                 <td>Travel</td>
                                 <td>500</td>
                                 <td>04/01/2026</td>
@@ -66,7 +66,7 @@
                                     <button class="edit-btn bi bi-pencil-fill"></button>
                                     <button class="dlt-btn bi bi-trash-fill"></button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -75,16 +75,18 @@
                 <div class="total">
                     <div class="income-total">
                         <p>Total Income</p>
-                        <span class="money-count" id="income-total-count">1000</span>
+                        <span class="money-count"></span>
                     </div>
                     <div class="expense-total">
                         <p>Total Expense</p>
-                        <span class="money-count" id="expense-total-count">1000</span>
+                        <span class="money-count"></span>
                     </div>
                     <div class="balance">
                         <p>Balance</p>
-                        <span class="money-count" id="balance-total-count">1000</span>
+                        <span class="money-count"></span>
                     </div>
+
+                    <button class="reset-btn" onclick="reset()">Reset / Clear All</button>
                 </div>
             </div>
         </div>
@@ -94,11 +96,11 @@
         <div class="editing-box" style="display: none;">
             <form action="" class="editing-form">
                 <h1 class="edit-head">Edit content</h1>
-                <input type="text" id="edited-name" placeholder="Edit name" />
-                <input type="number" id="edited-amount" placeholder="Amount" />
-                <input type="date" id="edited-date" />
+                <input type="text" id="edited-name" placeholder="Edit name" required/>
+                <input type="number" id="edited-amount" placeholder="Amount" min="1" required/>
+                <input type="date" id="edited-date" required/>
                 <div class="button-section">
-                    <button type="button">Cancel</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
                     <button type="submit">Add Expense</button>
                 </div>
             </form>
