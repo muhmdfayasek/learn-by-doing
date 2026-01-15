@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Multiplayer Quiz — UI</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- header of the quiz app -->
+            <header class="topbar">
+                <div class="brand">Quiz Together</div>
+            </header>
+
+            <!-- container of the page -->
+            <main class="container"> 
+                <!-- side section -->
+                <aside class="sidebar">
+                    <!-- scoreboard section -->
+                    <section class="scoreboard">
+                        <h3>Scoreboard</h3>
+                        <ul id="scoreboard-list">
+                            <li class="player-row">
+                                <div class="avatar">A</div>
+                                <div class="player-info">
+                                    <div class="name">Alice</div>
+                                    <div class="meta">Ready • 0pts</div>
+                                </div>
+                                <div class="points">0</div>
+                            </li>
+                            <li class="player-row">
+                                <div class="avatar">B</div>
+                                <div class="player-info">
+                                    <div class="name">Bob</div>
+                                    <div class="meta">Ready • 0pts</div>
+                                </div>
+                                <div class="points">0</div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- round info section -->
+                    <section class="round-info">
+                        <h4>Round</h4>
+                        <div class="round-bubble">1 / 10</div>
+                        <h4>Timer</h4>
+                        <div class="timer">00:15</div>
+                    </section>
+                </aside>
+
+                <!-- SPA main section -->
+                <section class="main-pane">
+                    <!-- lobby screen first SPA child section -->
+                    <div id="lobby-screen" class="screen">
+                        <h1 class="title">🏆 Quiz Lobby</h1>
+                        <p class="muted">Create or join a room, add players and start the quiz.</p>
+
+                        <!-- form for joining new user -->
+                        <form class="join-form">
+                            <input type="text" id="player-name" placeholder="Enter player name" />
+                            <button id="add-player-btn" class="primary">Join Game</button>
+                        </form>
+
+                        <!-- player details section -->
+                        <div class="players-panel">
+                            <h3>Players</h3>
+                            <ul id="player-list" class="players-list">
+                                <li class="player-card">
+                                    <div class="avatar">A</div>
+                                    <div class="info">
+                                        <div class="name">Alice</div>
+                                        <div class="status ready">Ready</div>
+                                    </div>
+                                    <div class="player-actions">
+                                        <button class="small">Kick</button>
+                                    </div>
+                                </li>
+                                <li class="player-card">
+                                    <div class="avatar">B</div>
+                                    <div class="info">
+                                        <div class="name">Bob</div>
+                                        <div class="status waiting">Waiting</div>
+                                    </div>
+                                    <div class="player-actions">
+                                        <button class="small">Kick</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- game starting controls -->
+                        <div class="lobby-controls">
+                            <div class="room-info">
+                                <label>Room:</label>
+                                <div class="room-code">AB12CD</div>
+                            </div>
+                            <button id="start-game-btn" class="primary" disabled>Start Quiz</button>
+                        </div>
+                    </div>
+
+                    <!-- game screen second SPA child section -->
+                    <div id="game-screen" class="screen" style="display: none">
+                        <div class="game-header">
+                            <h2 id="current-player-display">Alice's Turn</h2>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <div id="question-container" class="question-card">
+                            <div class="question-top">
+                                <div class="difficulty">Hard</div>
+                                <div class="timer-pill">15s</div>
+                            </div>
+                            <p id="question-text" class="question">Which planet has the most moons?</p>
+
+                            <div id="answer-options" class="answers">
+                                <button class="answer">Earth</button>
+                                <button class="answer">Mars</button>
+                                <button class="answer">Jupiter</button>
+                                <button class="answer">Saturn</button>
+                            </div>
+
+                            <div class="helper-row">
+                                <div class="lifelines">
+                                    <button class="chip">50:50</button>
+                                    <button class="chip">Ask</button>
+                                    <button class="chip">Skip</button>
+                                </div>
+                                <div class="buzz">Buzz</div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-info">
+                            <div class="hint">Category: Astronomy</div>
+                            <div class="audience">Audience: 4 players</div>
+                        </div>
+                    </div>
+
+                    <!-- result screen third SPA child section -->
+                    <div id="result-screen" class="screen" style="display: none">
+                        <h1>Final Rankings</h1>
+                        <div id="leaderboard-list" class="leaderboard">
+                            <div class="leader">
+                                <div class="rank">1</div>
+                                <div class="avatar large">A</div>
+                                <div class="info">
+                                    <div class="name">Alice</div>
+                                    <div class="score">120 pts</div>
+                                </div>
+                            </div>
+                            <div class="leader">
+                                <div class="rank">2</div>
+                                <div class="avatar large">B</div>
+                                <div class="info">
+                                    <div class="name">Bob</div>
+                                    <div class="score">90 pts</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="primary" onclick="location.reload()">Play Again</button>
+                            <button class="ghost">Export Scores</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
