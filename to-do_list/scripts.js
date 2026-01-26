@@ -131,7 +131,7 @@ const editHabit = (event) => {
         const getLiId = event.target.closest('li');
         const idToEdit = Number(getLiId.getAttribute('data-id'));
 
-        //console.log('clicked', event.target, 'closest .edit-btn ->', event.target.closest('.delete-btn'));
+        //console.log('clicked', event.target, 'closest .edit-btn ->', event.target.closest('.edit-btn'));
 
         //Find the closest li element, it's data-id
         newHabitArray = habitArray.map((habits) => {
