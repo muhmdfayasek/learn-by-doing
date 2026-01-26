@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "qnId": 1,
+      "category": "Science",
+      "difficulty": "Easy",
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "answer": "Mars"
+    },
+    {
+      "qnId": 2,
+      "category": "Geography",
+      "difficulty": "Easy",
+      "question": "What is the capital city of Japan?",
+      "options": ["Seoul", "Beijing", "Tokyo", "Bangkok"],
+      "answer": "Tokyo"
+    },
+    {
+      "qnId": 3,
+      "category": "Science",
+      "difficulty": "Medium",
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": ["Gold", "Oxygen", "Osmium", "Zinc"],
+      "answer": "Oxygen"
+    },
+    {
+      "qnId": 4,
+      "category": "Art",
+      "difficulty": "Easy",
+      "question": "Who painted the 'Mona Lisa'?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+      "answer": "Leonardo da Vinci"
+    },
+    {
+      "qnId": 5,
+      "category": "Geography",
+      "difficulty": "Medium",
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean"
+    },
+    {
+      "qnId": 6,
+      "category": "History",
+      "difficulty": "Hard",
+      "question": "In which year did the Titanic sink?",
+      "options": ["1905", "1912", "1920", "1898"],
+      "answer": "1912"
+    },
+    {
+      "qnId": 7,
+      "category": "Nature",
+      "difficulty": "Medium",
+      "question": "Which mammal is capable of true flight?",
+      "options": ["Flying Squirrel", "Bat", "Ostrich", "Penguin"],
+      "answer": "Bat"
+    },
+    {
+      "qnId": 8,
+      "category": "Mathematics",
+      "difficulty": "Hard",
+      "question": "What is the smallest prime number?",
+      "options": ["0", "1", "2", "3"],
+      "answer": "2"
+    },
+    {
+      "qnId": 9,
+      "category": "Geography",
+      "difficulty": "Easy",
+      "question": "Which country is famous for the Eiffel Tower?",
+      "options": ["Germany", "Italy", "France", "Spain"],
+      "answer": "France"
+    },
+    {
+      "qnId": 10,
+      "category": "Geography",
+      "difficulty": "Easy",
+      "question": "How many continents are there on Earth?",
+      "options": ["5", "6", "7", "8"],
+      "answer": "7"
+    }
+  ]
+}

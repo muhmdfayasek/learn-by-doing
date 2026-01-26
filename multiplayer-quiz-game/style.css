@@ -37,7 +37,10 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     background: transparent;
-    border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+    border-bottom: 1px solid rgba(17, 27, 42, 0.089);
+    background-color: var(--primary);
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 .brand {
@@ -58,17 +61,16 @@ body {
 /* sidebar */
 .sidebar {
     width: 260px;
-    background: linear-gradient(180deg, rgba(15, 23, 36, 0.02), transparent);
     padding: 16px;
     border-radius: 12px;
     border: 1px solid rgba(15, 23, 36, 0.04);
+    background-color: rgb(193, 215, 255);
 }
 
 /* scoreboard */
 .scoreboard h3 {
     margin: 0 0 8px 0;
     font-size: 14px;
-    color: var(--muted);
 }
 
 #scoreboard-list {
@@ -86,8 +88,8 @@ body {
     align-items: center;
     gap: 12px;
     padding: 8px;
-    background: var(--glass);
     border-radius: 10px;
+    background-color: var(--bg);
 }
 
 .avatar {
@@ -125,7 +127,6 @@ body {
 /* round timer & info */
 .round-info {
     margin-top: 18px;
-    color: var(--muted);
 }
 
 .round-bubble {
@@ -273,18 +274,6 @@ body {
     margin-bottom: 12px;
 }
 
-.progress {
-    flex: 1;
-    height: 10px;
-    background: rgba(15, 23, 36, 0.04);
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--primary));
-}
 
 /* question and answer section */
 .question-card {
@@ -407,13 +396,11 @@ body {
     margin-top: 14px;
 }
 
-.ghost {
-    background: transparent;
-    border: 1px solid rgba(15, 23, 36, 0.06);
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--muted);
-    cursor: pointer;
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
