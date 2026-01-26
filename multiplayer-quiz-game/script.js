@@ -426,6 +426,10 @@ function showResult() {
         const leader = document.createElement("div");
         leader.classList.add("leader");
 
+        if(player.id === playerSessionId) {
+            leader.classList.add("highlight");   // highlight current player
+        }
+
         leader.innerHTML = `<div class="rank">${index}</div>
                             <div class="avatar large">${player.name.charAt(0)}</div>
                             <div class="info">
