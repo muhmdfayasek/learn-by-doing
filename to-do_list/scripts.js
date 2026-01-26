@@ -134,24 +134,24 @@ const editHabit = (event) => {
         //console.log('clicked', event.target, 'closest .edit-btn ->', event.target.closest('.edit-btn'));
 
         //Find the closest li element, it's data-id
-        newHabitArray = habitArray.map((habits) => {
+        habitArray = habitArray.map((habits) => {
             
             //If find then change the habit
             if(habits.id === idToEdit) {
-                let editedHabit = window.prompt("Edit you habit", habits.habit);
+                let editedHabit = window.prompt("Edit your habit", habits.habit);
                 editedHabit = editedHabit.trim();
                 editedHabit = editedHabit.charAt(0).toUpperCase() + editedHabit.slice(1);
 
                 if(editedHabit !== null && editedHabit !== "") {
-                    habits.habit = editedHabit;
-
-                    showHabits();
-                    saveToLocalStorage();
+                    return {...habits, habit: editedHabit};  
                 }
             }
+            return habits;
         });
 
-        // console.log(newHabitArray);
+        showHabits();
+        saveToLocalStorage();
+        // console.log(habitArray);
     }
 }
 
