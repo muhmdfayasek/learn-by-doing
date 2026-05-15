@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.882);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.7rem;
+    color: #eeeeee;
+    letter-spacing: 1px;
+    margin: 8px;
+}
+
+header p {
+    color: #afafaf;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.status-bar {
+    margin: 40px 8px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 250px;
+    max-width: auto;
+    min-height: auto;
+}
+
+.status-bar.won { background-color: #2e7d32; }/* Green */
+.status-bar.lost { background-color: #ba1a1a; }/* Red */
+.status-bar.farewell { background-color: #7a5195; }/* Purple for farewells */
+.status-bar.hidden { visibility: hidden; }
+
+.status-bar p {
+    font-size: 20px;
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-width: 400px;
+    min-height: 25px;
+    max-height: auto;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.017);
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.lang-chip {
+    height: 25px;
+    padding: 4px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.lost-live {
+    position: relative;
+}
+
+.lost-live::after {
+    content: "💀"; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 450px;
+    margin: 30px 0;
+}
+
+.key {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: #D1D5DB;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+.word-display {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 30px 0;
+}
+
+.word-letter {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #323232;
+    border-bottom: 2px solid #555555;
+    border-radius: 4px;
+    color: #eeeeee;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.word-letter.missed-letter {
+    color: #EC5D49;
+}
+
+.new-game {
+    height: 40px;
+    width: 200px;
+    margin: 20px;
+    background-color: #388fce;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    outline: 2px solid rgb(7, 108, 142);
+}
+
+.key.correct {
+    background-color: #10b981 !important;
+    color: white;
+}
+
+.key.wrong {
+    background-color: #ef4444 !important;
+    opacity: 0.4;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.confetti {
+    display: flex;
+    justify-content: center;
+}
+
